@@ -3,6 +3,7 @@ import io from "socket.io-client";
 import "./VideoCall.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import sound from './assets/notification-1.mp3'
 
 let HOSTNAME = "http://localhost:5500";
 
@@ -38,6 +39,8 @@ function VideoCall({ROOM, userName, setRoomValidation}) {
 
   const localStream = useRef();
   const remoteStream = useRef();
+
+  let audioRef = new Audio(sound);
 
   async function startVideo() {
     localStream.current = await navigator.mediaDevices.getUserMedia({
@@ -150,6 +153,10 @@ function VideoCall({ROOM, userName, setRoomValidation}) {
     socket.close()
   }
 
+  async function playRingtone() {
+    audioRef.play()
+  }
+
 
   useEffect(() => {
     socket.on("new-user", (data) => {
@@ -175,6 +182,7 @@ function VideoCall({ROOM, userName, setRoomValidation}) {
     });
 
     socket.on("call-user", (data) => {
+      playRingtone()
       console.log("Incoming call...");
       setLocalDescription(JSON.stringify(data.desc));
       setIsCalling(false)
