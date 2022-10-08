@@ -205,6 +205,7 @@ function VideoCall({ROOM, userName, setRoomValidation}) {
 
     socket.on("end-call",(data)=>{
       setIsCalling(true);
+      setIsReceiving(false);
     })
   }, [socket]);
 
@@ -225,7 +226,7 @@ function VideoCall({ROOM, userName, setRoomValidation}) {
       <div className="main">
       <div className="left">
         <div className="video-container">
-          <video className="remote-video" ref={remoteVideo} autoPlay controls></video>
+          <video className="remote-video" ref={remoteVideo} autoPlay></video>
           <div className="remote-user-name">{remoteUserName}</div>
         </div>
       </div>
@@ -243,7 +244,7 @@ function VideoCall({ROOM, userName, setRoomValidation}) {
       <div className="call-controls">
         {isCalling && <button disabled={(remoteUserName === "Waiting...")} className="btn btn-success" onClick={createOffer}><i className="fa-solid fa-phone"></i></button>}
         {isReceiving && <button className="btn incoming-call" onClick={createAnswer}><i className="fa-solid fa-phone"></i></button>}
-        {(!isCalling && !isReceiving) && <button className="btn btn-danger" onClick={endCall}><i className="fa-solid fa-phone-slash"></i></button>}
+        {!(isCalling || isReceiving) && <button className="btn btn-danger" onClick={endCall}><i className="fa-solid fa-phone-slash"></i></button>}
       </div>
 
       </div>

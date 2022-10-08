@@ -123,3 +123,63 @@ nav .btn {
     font-size: 25px;
     border: 2px solid white;
 }
+
+@media only screen and (max-width: 400px) {
+    .app {
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        overflow: hidden;
+    }
+    nav {
+        height: 8%;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: 100%;
+        height: 90%;
+        position: relative;
+    }
+    .main .left .video-container {
+        margin-top: 3%;
+        position: absolute;
+        height: 90%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .main .left .video-container .remote-video {
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgb(89, 89, 212);
+    }
+    .main .left .video-container .remote-user-name {
+        top:10px;
+        left:10px;
+    }
+    .main .right .video-container-local {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        margin-top: 3%;
+    }
+    .main .right .video-container-local .local-video {
+        width: 100%;
+        height: 150px;
+        border: 1px solid rgb(100, 238, 88);
+    }
+    .media-controls, .call-controls {
+        position: absolute;
+        /* bottom: 15%; */
+    }
+    .media-controls {
+        top: 170px;
+        right: 2px;
+    }
+    .call-controls {
+        bottom: 15%;
+        left: 50%;
+        translate: -50%;
+    }
+  }

@@ -4,6 +4,9 @@
 /node_modules
 /client/node_modules
 /server/node_modules
+/client/firebase.json
+/client/.firebase
+/client/.firebaserc
 /.pnp
 .pnp.js
 
