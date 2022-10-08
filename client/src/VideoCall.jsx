@@ -217,7 +217,7 @@ function VideoCall({ROOM, userName, setRoomValidation}) {
       <div className="main">
       <div className="left">
         <div className="video-container">
-          <video className="remote-video" ref={remoteVideo} muted autoPlay></video>
+          <video className="remote-video" ref={remoteVideo} autoPlay></video>
           <div className="remote-user-name">{remoteUserName}</div>
         </div>
       </div>
