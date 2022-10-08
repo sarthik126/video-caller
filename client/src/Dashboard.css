@@ -1,0 +1,39 @@
+.main-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-logo {
+    font-size: 30px;
+}
+.join-modal {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+.join-form {
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.input-wrapper #room-name, .input-wrapper #user-name {
+    width: 250px;
+    padding: 5px 10px;
+}
+label {
+    cursor: pointer;
+    align-items: flex-start;
+}
+.join-btns {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
