@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./Dashboard.css";
 import VideoCall from "./VideoCall";
 
-const HOSTNAME = "http://localhost:5500";
+// const HOSTNAME = "http://localhost:5500";
+const HOSTNAME = "https://zapp-video-call.herokuapp.com";
 
 function Dashboard() {
   const [userName, setUserName] = useState("");

@@ -5,7 +5,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import sound from './assets/notification-1.mp3'
 
-let HOSTNAME = "http://localhost:5500";
+// let HOSTNAME = "http://localhost:5500";
+let HOSTNAME = "https://zapp-video-call.herokuapp.com"
 
 const servers = {
   iceServers: [
