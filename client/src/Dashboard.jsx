@@ -3,7 +3,7 @@ import "./Dashboard.css";
 import VideoCall from "./VideoCall";
 
 // const HOSTNAME = "http://localhost:5500";
-const HOSTNAME = "https://zapp-video-call.herokuapp.com";
+const HOSTNAME = "https://video-caller-server.up.railway.app";
 
 function Dashboard() {
   const [userName, setUserName] = useState("");

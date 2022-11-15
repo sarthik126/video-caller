@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import sound from './assets/notification-1.mp3'
 
 // let HOSTNAME = "http://localhost:5500";
-let HOSTNAME = "https://zapp-video-call.herokuapp.com"
+let HOSTNAME = "https://video-caller-server.up.railway.app"
 
 const servers = {
   iceServers: [
